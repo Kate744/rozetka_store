@@ -7,6 +7,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from base.base_class import Base
 from selenium.webdriver.common.action_chains import ActionChains
 from base.base_class import Base
+from utilities.logger import Logger
 
 
 class Card_rozetka_page(Base):
@@ -57,10 +58,12 @@ class Card_rozetka_page(Base):
 
     # Methods список производимых действий
     def select_rozetka_to_buy(self):
+        Logger.add_start_step(method="select_rozetka_to_buy")
         self.get_current_url()
         self.save_price_rozetka_on_product_card_page()
         self.click_buy_button_on_product_card_page()
         self.click_get_korzina_button_on_popup()
+        Logger.add_end_step(url=self.driver.current_url, method="select_rozetka_to_buy")
 
 
 

@@ -8,6 +8,7 @@ from base.base_class import Base
 from selenium.webdriver.common.action_chains import ActionChains
 from base.base_class import Base
 from pages.card_rozetka_page import Card_rozetka_page
+from utilities.logger import Logger
 
 
 class Confirm_order_page(Base):
@@ -43,10 +44,12 @@ class Confirm_order_page(Base):
 
     # Methods список производимых действий
     def confirm_the_order(self):
+        Logger.add_start_step(method="confirm_the_order")
         self.get_current_url()
         self.assert_url_of_page(self.url_of_confirm_order_page)
         self.enter_get_field_phone_number()
         self.get_screenshot()
+        Logger.add_end_step(url=self.driver.current_url, method="confirm_the_order")
 
 
 

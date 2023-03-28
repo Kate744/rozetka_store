@@ -7,6 +7,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from base.base_class import Base
 from selenium.webdriver.common.action_chains import ActionChains
 from base.base_class import Base
+from utilities.logger import Logger
+
 
 class Login_page(Base):
  # На этой странице пользователь вводит свои данные для авторизации
@@ -66,11 +68,13 @@ class Login_page(Base):
 
     # Methods список производимых действий
     def authorization(self):
+        Logger.add_start_step(method="authorization")
         self.driver.get(self.url)
         self.click_sign_in_link()
         self.get_current_url()
         self.enter_email(self.email)
         self.enter_password(self.password)
         self.click_sign_in_button()
+        Logger.add_end_step(url=self.driver.current_url, method="authorization")
 
 

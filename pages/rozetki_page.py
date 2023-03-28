@@ -6,6 +6,9 @@ from selenium.webdriver.common.by import By
 from base.base_class import Base
 from selenium.webdriver.support.wait import WebDriverWait
 
+from utilities.logger import Logger
+
+
 class Rozetki_page(Base):
     # на этой странице я выбираю фильтр по стране-производителю, и по виду товара
     # прощу учесть, что явное ожидание тут по причине того, что как только фильтры применены, система долго реагирует
@@ -104,6 +107,7 @@ class Rozetki_page(Base):
 
 # Methods
     def select_filters_for_rozetki(self):
+        Logger.add_start_step(method="select_filters_for_rozetki")
         self.get_current_url()
         self.click_link_more_filters()
         self.click_get_filter_strana()
@@ -113,6 +117,7 @@ class Rozetki_page(Base):
         self.click_get_sort_button()
         self.click_checkbox_sort_by_high_price()
         self.click_get_item_rozetka_etud()
+        Logger.add_end_step(url=self.driver.current_url, method="select_filters_for_rozetki")
 
 
 
