@@ -1,5 +1,6 @@
 
 import time
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -44,12 +45,13 @@ class Confirm_order_page(Base):
 
     # Methods список производимых действий
     def confirm_the_order(self):
-        Logger.add_start_step(method="confirm_the_order")
-        self.get_current_url()
-        self.assert_url_of_page(self.url_of_confirm_order_page)
-        self.enter_get_field_phone_number()
-        self.get_screenshot()
-        Logger.add_end_step(url=self.driver.current_url, method="confirm_the_order")
+        with allure.step("Confirm_the_order"):
+            Logger.add_start_step(method="confirm_the_order")
+            self.get_current_url()
+            self.assert_url_of_page(self.url_of_confirm_order_page)
+            self.enter_get_field_phone_number()
+            self.get_screenshot()
+            Logger.add_end_step(url=self.driver.current_url, method="confirm_the_order")
 
 
 

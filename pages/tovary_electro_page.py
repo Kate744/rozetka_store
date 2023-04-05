@@ -1,5 +1,5 @@
 import time
-
+import allure
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
@@ -54,12 +54,13 @@ class Tovary_electro_page(Base):
 
 # Methods
     def select_product_category(self):
-        Logger.add_start_step(method="select_product_category")
-        self.get_current_url()
-        self.click_header_tovary()
-        self.click_get_menu_item_electro()
-        self.scroll_to_show_all_items()
-        self.click_get_sub_menu_item_rozetki()
-        Logger.add_end_step(url=self.driver.current_url, method="select_product_category")
+        with allure.step("Select_product_category"):
+            Logger.add_start_step(method="select_product_category")
+            self.get_current_url()
+            self.click_header_tovary()
+            self.click_get_menu_item_electro()
+            self.scroll_to_show_all_items()
+            self.click_get_sub_menu_item_rozetki()
+            Logger.add_end_step(url=self.driver.current_url, method="select_product_category")
 
 

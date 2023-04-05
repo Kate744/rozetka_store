@@ -1,4 +1,5 @@
 import time
+import allure
 from selenium import webdriver
 
 from pages.card_rozetka_page import Card_rozetka_page
@@ -8,7 +9,7 @@ from pages.login_page import Login_page
 from pages.rozetki_page import Rozetki_page
 from pages.tovary_electro_page import Tovary_electro_page
 
-
+@allure.description("Проверка test buy rozetka")
 def test_buy_rozetka():
     driver = webdriver.Chrome(executable_path='/Users/katefilippova/PycharmProjects/resourse/chromedriver')
     driver.maximize_window()

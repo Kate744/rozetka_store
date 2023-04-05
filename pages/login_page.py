@@ -1,5 +1,6 @@
 
 import time
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -68,13 +69,14 @@ class Login_page(Base):
 
     # Methods список производимых действий
     def authorization(self):
-        Logger.add_start_step(method="authorization")
-        self.driver.get(self.url)
-        self.click_sign_in_link()
-        self.get_current_url()
-        self.enter_email(self.email)
-        self.enter_password(self.password)
-        self.click_sign_in_button()
-        Logger.add_end_step(url=self.driver.current_url, method="authorization")
+        with allure.step("Authorization"):
+            Logger.add_start_step(method="authorization")
+            self.driver.get(self.url)
+            self.click_sign_in_link()
+            self.get_current_url()
+            self.enter_email(self.email)
+            self.enter_password(self.password)
+            self.click_sign_in_button()
+            Logger.add_end_step(url=self.driver.current_url, method="authorization")
 
 

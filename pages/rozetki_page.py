@@ -1,5 +1,5 @@
 import time
-
+import allure
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
@@ -107,17 +107,18 @@ class Rozetki_page(Base):
 
 # Methods
     def select_filters_for_rozetki(self):
-        Logger.add_start_step(method="select_filters_for_rozetki")
-        self.get_current_url()
-        self.click_link_more_filters()
-        self.click_get_filter_strana()
-        self.check_get_checkbox_for_russia()
-        self.click_get_filter_vid()
-        self.check_get_checkbox_for_vid_combinirovanny()
-        self.click_get_sort_button()
-        self.click_checkbox_sort_by_high_price()
-        self.click_get_item_rozetka_etud()
-        Logger.add_end_step(url=self.driver.current_url, method="select_filters_for_rozetki")
+        with allure.step("Select_filters_for_rozetki"):
+            Logger.add_start_step(method="select_filters_for_rozetki")
+            self.get_current_url()
+            self.click_link_more_filters()
+            self.click_get_filter_strana()
+            self.check_get_checkbox_for_russia()
+            self.click_get_filter_vid()
+            self.check_get_checkbox_for_vid_combinirovanny()
+            self.click_get_sort_button()
+            self.click_checkbox_sort_by_high_price()
+            self.click_get_item_rozetka_etud()
+            Logger.add_end_step(url=self.driver.current_url, method="select_filters_for_rozetki")
 
 
 

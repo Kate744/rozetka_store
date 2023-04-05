@@ -1,5 +1,6 @@
 
 import time
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -58,12 +59,13 @@ class Card_rozetka_page(Base):
 
     # Methods список производимых действий
     def select_rozetka_to_buy(self):
-        Logger.add_start_step(method="select_rozetka_to_buy")
-        self.get_current_url()
-        self.save_price_rozetka_on_product_card_page()
-        self.click_buy_button_on_product_card_page()
-        self.click_get_korzina_button_on_popup()
-        Logger.add_end_step(url=self.driver.current_url, method="select_rozetka_to_buy")
+        with allure.step("Select rozetka to buy"):
+            Logger.add_start_step(method="select_rozetka_to_buy")
+            self.get_current_url()
+            self.save_price_rozetka_on_product_card_page()
+            self.click_buy_button_on_product_card_page()
+            self.click_get_korzina_button_on_popup()
+            Logger.add_end_step(url=self.driver.current_url, method="select_rozetka_to_buy")
 
 
 

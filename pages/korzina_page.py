@@ -1,5 +1,6 @@
 
 import time
+import allure
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -54,13 +55,14 @@ class Korzina_page(Base):
 
     # Methods список производимых действий
     def rozetka_in_korzina(self):
-        Logger.add_start_step(method="rozetka_in_korzina")
-        self.get_current_url()
-        self.assert_url_of_page("https://saray.ru/personal/cart/")
-        self.give_price_rozetka_in_korzina()
-        self.assert_price(Card_rozetka_page.price_rozetka_on_product_card_page_to_text, self.price_rozetka_in_korzina_to_text)
-        self.click_get_button_complete_order()
-        Logger.add_end_step(url=self.driver.current_url, method="rozetka_in_korzina")
+        with allure.step("Rozetka_in_korzina"):
+            Logger.add_start_step(method="rozetka_in_korzina")
+            self.get_current_url()
+            self.assert_url_of_page("https://saray.ru/personal/cart/")
+            self.give_price_rozetka_in_korzina()
+            self.assert_price(Card_rozetka_page.price_rozetka_on_product_card_page_to_text, self.price_rozetka_in_korzina_to_text)
+            self.click_get_button_complete_order()
+            Logger.add_end_step(url=self.driver.current_url, method="rozetka_in_korzina")
 
 
 
