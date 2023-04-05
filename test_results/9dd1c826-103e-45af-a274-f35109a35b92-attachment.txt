@@ -1,0 +1,36 @@
+Started test
+Sign In кликнута
+Current url https://saray.ru/lk/
+Email введен
+Password введен
+Кнопка Sign In кликнута
+Current url https://saray.ru/lk/?login=yes
+header_tovary кликнута
+Категория electro выбрана
+Проскролено
+sub_menu_item_rozetki кликнута
+Current url https://saray.ru/catalog/rozetki_i_vyklyuchateli/
+more_filters кликнута
+filter strana кликнута
+Россия чекбокс кликнут
+filter vid кликнут
+Combined чекбокс кликнут и данные загружены
+Сортировка кликнута
+Сортировка по высокой цене выбрана
+Отсортировано
+Розетка выбрана
+Current url https://saray.ru/catalog/detail/blok_op_etyud_1_m_rozetka_s_zazeml_zashch_shtorki_2_kl_vykl_sosna_sche_bpa16_202d/
+Считали цену розетки
+755
+Кнопка купить нажата
+Кнопка на попапе нажата
+Current url https://saray.ru/personal/cart/
+URL на странице соответствует ожидаемому
+Считали цену розетки в корзине
+755
+Цена на странице товара и в корзине совпадают
+Кнопка Оформить заказ нажата
+Current url https://saray.ru/personal/order/make/
+URL на странице соответствует ожидаемому
+Телефон введен
+Finished test

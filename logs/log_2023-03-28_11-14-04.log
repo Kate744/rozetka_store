@@ -1,0 +1,66 @@
+
+-----
+Test: tests/test_buy_rozetka.py::test_buy_rozetka (call)
+Start time: 2023-03-28 11:14:07.317364
+Start name method: authorization
+
+End time: 2023-03-28 11:14:09.900265
+End name method: authorization
+URL: https://saray.ru/lk/?login=yes
+
+-----
+
+-----
+Test: tests/test_buy_rozetka.py::test_buy_rozetka (call)
+Start time: 2023-03-28 11:14:10.903729
+Start name method: select_product_category
+
+End time: 2023-03-28 11:14:18.225382
+End name method: select_product_category
+URL: https://saray.ru/catalog/rozetki_i_vyklyuchateli/
+
+-----
+
+-----
+Test: tests/test_buy_rozetka.py::test_buy_rozetka (call)
+Start time: 2023-03-28 11:14:18.225630
+Start name method: select_filters_for_rozetki
+
+End time: 2023-03-28 11:14:42.830044
+End name method: select_filters_for_rozetki
+URL: https://saray.ru/catalog/detail/blok_op_etyud_1_m_rozetka_s_zazeml_zashch_shtorki_2_kl_vykl_sosna_sche_bpa16_202d/
+
+-----
+
+-----
+Test: tests/test_buy_rozetka.py::test_buy_rozetka (call)
+Start time: 2023-03-28 11:14:42.830263
+Start name method: select_rozetka_to_buy
+
+End time: 2023-03-28 11:14:43.889978
+End name method: select_rozetka_to_buy
+URL: https://saray.ru/personal/cart/
+
+-----
+
+-----
+Test: tests/test_buy_rozetka.py::test_buy_rozetka (call)
+Start time: 2023-03-28 11:14:43.890167
+Start name method: rozetka_in_korzina
+
+End time: 2023-03-28 11:14:45.319851
+End name method: rozetka_in_korzina
+URL: https://saray.ru/personal/order/make/
+
+-----
+
+-----
+Test: tests/test_buy_rozetka.py::test_buy_rozetka (call)
+Start time: 2023-03-28 11:14:45.320084
+Start name method: confirm_the_order
+
+End time: 2023-03-28 11:14:45.882219
+End name method: confirm_the_order
+URL: https://saray.ru/personal/order/make/
+
+-----
